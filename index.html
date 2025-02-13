@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Crypto Live Chart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 Live Cryptocurrency Comparison</h1>
+    <div class="controls">
+      <div class="crypto-selector">
+        <button class="coin-btn active" data-coin="bitcoin">BTC</button>
+        <button class="coin-btn active" data-coin="ethereum">ETH</button>
+        <button class="coin-btn" data-coin="cardano">ADA</button>
+        <button class="coin-btn" data-coin="solana">SOL</button>
+      </div>
+      <div class="status">
+        <div class="pulse"></div>
+        <span>Live</span>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="priceChart"></canvas>
+    </div>
+    <div class="price-board">
+      <div class="price-card bitcoin">
+        <h3>BTC <span class="trend"></span></h3>
+        <p>$<span class="price">...</span></p>
+      </div>
+      <div class="price-card cardano">
+        <h3>ADA <span class="trend"></span></h3>
+        <p>$<span class="price">...</span></p>
+      </div>
+      <div class="price-card ethereum">
+        <h3>ETH <span class="trend"></span></h3>
+        <p>$<span class="price">...</span></p>
+      </div>
+      <div class="price-card solana">
+        <h3>SOL <span class="trend"></span></h3>
+        <p>$<span class="price">...</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
